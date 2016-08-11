@@ -1,0 +1,13 @@
+git 中用来看状态是git status，一般用来查看是否有文件变更。
+
+提交文件的变更一般首先需要git add加入到暂存区中，然后可以添加多个，最后可以一口气一起用git commit -m来提交到master分支。暂存区(stage)的概念极其重要
+
+任意文件的改动可以用git diff来查看。
+
+版本控制系统最重要的是有修改日志，用git log来查看。如果希望显示成一行，一般加入参数--pretty=oneline
+
+在切换版本，用git reset --hard 来实现回退，HEAD是一个指向当前版本的指针。 如果不回退而是前进，一般需要找到相应的版本号再用reset，版本号的查找，使用git reflog
+
+关于暂存区的概念很重要。commit只提交暂存区的东西，修改不add到stage中是不会被commit的
+
+一般用来看版本库中的文件与工作区文件之间的区别，用git diff HEAD -- <文件> 来完成
